@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: min(80%, 900px);
+  margin-top: 200px;
+}
+
+.dropDownContainer {
+  background: #e9f6ff;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  height: max-content;
+}
+
+.dropDown {
+  width: max-content;
+  position: relative;
+}
+
+.dropDown select {
+  padding: 10px;
+  border-radius: 5px;
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  width: 150px;
+  border: 1px solid rgb(29, 29, 29);
+}
+
+.dropDown::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 7px;
+  height: 7px;
+  border: 2px solid rgb(29, 29, 29);
+  border-top: transparent;
+  border-left: transparent;
+  transform: translate(-50%, -75%) rotate(45deg);
+  pointer-events: none;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:nth-child(1) {
+  border: 2px solid rgb(226, 226, 226);
+  background-color: rgb(240, 240, 240);
+}
+
+.card h5 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgb(143, 143, 143);
+}
+
+.card img {
+  filter: drop-shadow(0 0 4px rgb(143, 143, 143));
+}
+
+.card .temp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card .temp span:nth-child(2) {
+  color: rgb(143, 143, 143);
+}
